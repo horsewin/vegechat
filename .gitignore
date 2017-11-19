@@ -116,3 +116,4 @@ typings/
 /speechAssets/
 .idea/*
 package-lock.json
+/cf.yml

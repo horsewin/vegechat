@@ -1,14 +1,15 @@
 {
-  "name": "VegeChatableSkill",
-  "description": "VegeChatableSkill is the skill to answer vegetable information.",
+  "name": "VegeChatSkill",
+  "description": "VegeChat is the skill to answer vegetable information.",
   "version": "0.0.1",
   "private": true,
-  "dependencies": {},
+  "dependencies": {
+    "alexa-sdk": "^1.0.20"
+  },
   "constributors": [
     {}
   ],
   "devDependencies": {
-    "alexa-sdk": "^1.0.20",
-    "aws-sdk": "^2.70.0"
+    "alexa-sdk": "^1.0.20"
   }
 }

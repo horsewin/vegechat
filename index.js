@@ -30,6 +30,12 @@ const state = require("./dataAssets/state.json");
 const MESSAGE = require("./message_ja.json");
 
 /**
+ * 応答データとのマッピング変数
+ */
+const PATTERN = require("./dataAssets/pattern.json");
+
+
+/**
  * 応答データ格納変数
  */
 const DATA = require("./dataAssets/data.json");
@@ -91,22 +97,27 @@ let NewSessionHandler = {
 
 let ActionHandler = Alexa.CreateStateHandler(state.LOOPBACK, {
     'MyVegetableIntent': function () {
-        let nameSlot = this.event.request.intent.slots.VEGETABLE_NAME;
-        let seasonSlot = this.event.request.intent.slots.SEASON_NAME;
+        let nameSlot = this.event.request.intent.slots.VegetableName;
+        let seasonSlot = this.event.request.intent.slots.SeasonName;
 
         let speechOutput;
-        if (!DATA[nameSlot.value]){
+        let vegetableName = PATTERN[nameSlot.value];
+        if (!vegetableName){
             speechOutput = util.format(MESSAGE.guide.noinfo.speechOutput, nameSlot.value);
             this.emit(':ask', speechOutput, MESSAGE.guide.noinfo.repromptText);
         }else{
-            let vegeJson = DATA[nameSlot.value];
-            if (seasonSlot.value){
-                speechOutput = util.format(MESSAGE.action.speechOutput, nameSlot.value, vegeJson.season, vegeJson.description);
+            let vegeJson = DATA[vegetableName];
+            if (!seasonSlot.value){
+                speechOutput = util.format(MESSAGE.action.speechOutput, vegetableName, vegeJson.season, vegeJson.description);
             }else{
-                speechOutput = util.format(MESSAGE.action.speechOutput, nameSlot.value, vegeJson.season, '。');
+                speechOutput = util.format(MESSAGE.action.speechOutput, vegetableName, vegeJson.season, '。');
             }
             this.emit(':ask', speechOutput, MESSAGE.action.repromptText);
         }
+    },
+    'AMAZON.HelpIntent': function () {
+        this.handler.state = state.LOOPBACK;
+        this.emit(':ask', MESSAGE.help.speechOutput, MESSAGE.help.repromptText);
     },
     'MyVegetableOnlyIntent': function () {
         this.emitWithState('MyVegetableIntent');
