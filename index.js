@@ -103,8 +103,12 @@ let ActionHandler = Alexa.CreateStateHandler(state.LOOPBACK, {
         let speechOutput;
         let vegetableName = PATTERN[nameSlot.value];
         if (!vegetableName){
-            speechOutput = util.format(MESSAGE.guide.noinfo.speechOutput, nameSlot.value);
-            this.emit(':ask', speechOutput, MESSAGE.guide.noinfo.repromptText);
+            if (nameSlot.value) {
+                speechOutput = util.format(MESSAGE.guide.noinfo.speechOutput, nameSlot.value);
+                this.emit(this.event.session.new ? ':welcomeAsk' : ':ask', speechOutput, MESSAGE.guide.noinfo.repromptText);
+            } else {
+                this.emit(this.event.session.new ? ':welcomeAsk' : ':ask', MESSAGE.guide.error.speechOutput, MESSAGE.guide.error.repromptText);
+            }
         }else{
             let vegeJson = DATA[vegetableName];
             if (!seasonSlot.value){
@@ -112,7 +116,7 @@ let ActionHandler = Alexa.CreateStateHandler(state.LOOPBACK, {
             }else{
                 speechOutput = util.format(MESSAGE.action.speechOutput, vegetableName, vegeJson.season, '。');
             }
-            this.emit(':ask', speechOutput, MESSAGE.action.repromptText);
+            this.emit(this.event.session.new ? ':welcomeAsk' : ':ask', speechOutput, MESSAGE.action.repromptText);
         }
     },
     'AMAZON.HelpIntent': function () {

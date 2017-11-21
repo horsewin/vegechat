@@ -118,3 +118,6 @@ typings/
 package-lock.json
 /cf.yml
 /UnitJson/
+buildspec.yml
+index.zip
+template.yml
