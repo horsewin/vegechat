@@ -4,12 +4,8 @@
   "version": "0.0.1",
   "private": true,
   "dependencies": {
-    "alexa-sdk": "^1.0.20"
+    "alexa-conversation": "^0.2.0",
+    "alexa-sdk": "^1.0.25"
   },
-  "constributors": [
-    {}
-  ],
-  "devDependencies": {
-    "alexa-sdk": "^1.0.20"
-  }
+  "constributors": []
 }
