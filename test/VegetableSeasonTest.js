@@ -19,10 +19,22 @@ process.env.APP_ID = "amzn1.ask.skill.a0705423-fd46-4532-9c2a-5774af6b8914";
 
 // 全体説明
 conversation(opts)
+    .userSays('LaunchRequest')
+    .ssmlResponse
+    .shouldEqual(
+        "<speak> ベジチャットへようこそ。知りたい野菜を教えてください。 </speak>",
+        "<speak> どの野菜について知りたいですか？ </speak>"
+    )
+    .userSays('MyVegetableIntent', {VegetableName: 'キャベツ', SeasonName: '旬'})
+    .ssmlResponse
+    .shouldEqual(
+        "<speak> キャベツの旬は3月から5月です。。。他にどの野菜について知りたいですか？ </speak>",
+        "<speak> 他にどの野菜について知りたいですか？ </speak>"
+    )
     .userSays('MyVegetableIntent', {VegetableName: 'アスパラガス', SeasonName: '旬'})
     .ssmlResponse
     .shouldEqual(
-        "<speak> にんじんの旬は4月から7月、11月から12月です。。。他にどの野菜について知りたいですか？ </speak>",
+        "<speak> アスパラガスの旬は3月から6月です。。。他にどの野菜について知りたいですか？ </speak>",
         "<speak> 他にどの野菜について知りたいですか？ </speak>"
     )
     .userSays('AMAZON.CancelIntent')
