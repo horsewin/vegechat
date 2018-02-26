@@ -100,63 +100,63 @@ conversation(opts)
     .userSays('MyVegetableOnlyIntent', {VegetableName: 'かぼちゃ', SeasonName: ''})
     .ssmlResponse
     .shouldEqual(
-        "<speak> かぼちゃの旬は5月から8月です。。。他にどの野菜について知りたいですか？ </speak>",
+        "<speak> かぼちゃの旬は5月から8月です。丸ごとの場合は、風通しのよい涼しいところで1-2ヶ月保存が可能です。切った場合は、種とワタの部分から傷むので、必ずきれいに取り除いてからラップをし、冷蔵庫の野菜室で保存し、１週間くらいで使い切りましょう。。他にどの野菜について知りたいですか？ </speak>",
         "<speak> 他にどの野菜について知りたいですか？ </speak>"
     )
-    .userSays('MyVegetableOnlyIntent', {VegetableName: '', SeasonName: ''})
+    .userSays('MyVegetableOnlyIntent', {VegetableName: 'なす', SeasonName: ''})
     .ssmlResponse
     .shouldEqual(
-        "<speak> の旬はです。。。他にどの野菜について知りたいですか？ </speak>",
+        "<speak> なすの旬は6月から9月です。なすは水分が蒸発しやすく、特に、風に当たると早くしなびてしまいます。保存するときは、水分が逃げないように1個ずつラップに包んで冷蔵庫の野菜室に入れましょう。保存温度が5℃以下になると身が縮んでしまうので、冷しすぎに注意。購入してから3-4日で食べてしまうのがベストです。長く保存する場合は、煮物や炒め物など、調理をしてから密閉容器に入れ、冷凍保存します。。他にどの野菜について知りたいですか？ </speak>",
         "<speak> 他にどの野菜について知りたいですか？ </speak>"
     )
-    .userSays('MyVegetableOnlyIntent', {VegetableName: '', SeasonName: ''})
+    .userSays('MyVegetableOnlyIntent', {VegetableName: 'ゴーヤ', SeasonName: ''})
     .ssmlResponse
     .shouldEqual(
-        "<speak> の旬はです。。。他にどの野菜について知りたいですか？ </speak>",
+        "<speak> ゴーヤの旬は7月から8月です。水気と乾燥が大敵で、常温で置いておくと実が黄色になり、味や品質も落ちてしまいます。表面をふいてからポリ袋やラップでくるみ、冷蔵庫の野菜室に立てて保存しましょう。。他にどの野菜について知りたいですか？ </speak>",
         "<speak> 他にどの野菜について知りたいですか？ </speak>"
     )
-    .userSays('MyVegetableOnlyIntent', {VegetableName: '', SeasonName: ''})
+    .userSays('MyVegetableOnlyIntent', {VegetableName: 'とうもろこし', SeasonName: ''})
     .ssmlResponse
     .shouldEqual(
-        "<speak> の旬はです。。。他にどの野菜について知りたいですか？ </speak>",
+        "<speak> とうもろこしの旬は7月から8月です。収穫後急速に栄養価が落ちますので、極力買ったらその日のうちに食べることをおすすめします。保存する場合は、皮付きのままラップで包み野菜室へ。すぐに食べない場合はゆでてからラップで包み冷蔵庫に入れれば2-3日は保存可能です。。他にどの野菜について知りたいですか？ </speak>",
         "<speak> 他にどの野菜について知りたいですか？ </speak>"
     )
-    .userSays('MyVegetableOnlyIntent', {VegetableName: '', SeasonName: ''})
+    .userSays('MyVegetableOnlyIntent', {VegetableName: 'ズッキーニ', SeasonName: ''})
     .ssmlResponse
     .shouldEqual(
-        "<speak> の旬はです。。。他にどの野菜について知りたいですか？ </speak>",
+        "<speak> ズッキーニの旬は6月から8月です。乾燥しやすく、水分が抜けてしまうと味が落ちやすいので、ラップや新聞紙に包んで冷蔵庫の野菜室で保存しましょう。 冷凍して保存するには、輪切りや角切りにしてかために加熱し、トレイなどに並べ、くっつかないようにし、完全に凍ったら保存袋に移しましょう。。他にどの野菜について知りたいですか？ </speak>",
         "<speak> 他にどの野菜について知りたいですか？ </speak>"
     )
-    .userSays('MyVegetableOnlyIntent', {VegetableName: '', SeasonName: ''})
+    .userSays('MyVegetableOnlyIntent', {VegetableName: 'にんじん', SeasonName: ''})
     .ssmlResponse
     .shouldEqual(
-        "<speak> の旬はです。。。他にどの野菜について知りたいですか？ </speak>",
+        "<speak> にんじんの旬は4月から7月、11月から12月です。湿気に弱いので冷蔵庫に丸のまま保存する際には新聞紙などで包みましょう。冬など寒い季節は新聞紙にくるんだり、箱のまま冷暗所においておいても大丈夫です。切った物は切り口から傷み始めるので、ぴったりとラップで包んで冷蔵庫に入れておき、3日-4日位で使い切るようにしましょう。。他にどの野菜について知りたいですか？ </speak>",
         "<speak> 他にどの野菜について知りたいですか？ </speak>"
     )
-    .userSays('MyVegetableOnlyIntent', {VegetableName: '', SeasonName: ''})
-    .ssmlResponse
-    .shouldEqual(
-        "<speak> の旬はです。。。他にどの野菜について知りたいですか？ </speak>",
-        "<speak> 他にどの野菜について知りたいですか？ </speak>"
-    )
-    .userSays('MyVegetableOnlyIntent', {VegetableName: '', SeasonName: ''})
-    .ssmlResponse
-    .shouldEqual(
-        "<speak> の旬はです。。。他にどの野菜について知りたいですか？ </speak>",
-        "<speak> 他にどの野菜について知りたいですか？ </speak>"
-    )
-    .userSays('MyVegetableOnlyIntent', {VegetableName: '', SeasonName: ''})
-    .ssmlResponse
-    .shouldEqual(
-        "<speak> の旬はです。。。他にどの野菜について知りたいですか？ </speak>",
-        "<speak> 他にどの野菜について知りたいですか？ </speak>"
-    )
-    .userSays('MyVegetableOnlyIntent', {VegetableName: '', SeasonName: ''})
-    .ssmlResponse
-    .shouldEqual(
-        "<speak> の旬はです。。。他にどの野菜について知りたいですか？ </speak>",
-        "<speak> 他にどの野菜について知りたいですか？ </speak>"
-    )
+    // .userSays('MyVegetableOnlyIntent', {VegetableName: '', SeasonName: ''})
+    // .ssmlResponse
+    // .shouldEqual(
+    //     "<speak> の旬はです。。。他にどの野菜について知りたいですか？ </speak>",
+    //     "<speak> 他にどの野菜について知りたいですか？ </speak>"
+    // )
+    // .userSays('MyVegetableOnlyIntent', {VegetableName: '', SeasonName: ''})
+    // .ssmlResponse
+    // .shouldEqual(
+    //     "<speak> の旬はです。。。他にどの野菜について知りたいですか？ </speak>",
+    //     "<speak> 他にどの野菜について知りたいですか？ </speak>"
+    // )
+    // .userSays('MyVegetableOnlyIntent', {VegetableName: '', SeasonName: ''})
+    // .ssmlResponse
+    // .shouldEqual(
+    //     "<speak> の旬はです。。。他にどの野菜について知りたいですか？ </speak>",
+    //     "<speak> 他にどの野菜について知りたいですか？ </speak>"
+    // )
+    // .userSays('MyVegetableOnlyIntent', {VegetableName: '', SeasonName: ''})
+    // .ssmlResponse
+    // .shouldEqual(
+    //     "<speak> の旬はです。。。他にどの野菜について知りたいですか？ </speak>",
+    //     "<speak> 他にどの野菜について知りたいですか？ </speak>"
+    // )
     .userSays('AMAZON.CancelIntent')
     .ssmlResponse
     .shouldEqual(

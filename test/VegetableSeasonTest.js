@@ -103,34 +103,34 @@ conversation(opts)
         "<speak> かぼちゃの旬は5月から8月です。。。他にどの野菜について知りたいですか？ </speak>",
         "<speak> 他にどの野菜について知りたいですか？ </speak>"
     )
-    .userSays('MyVegetableIntent', {VegetableName: '', SeasonName: '旬'})
+    .userSays('MyVegetableIntent', {VegetableName: 'なす', SeasonName: '旬'})
     .ssmlResponse
     .shouldEqual(
-        "<speak> の旬は4です。。。他にどの野菜について知りたいですか？ </speak>",
+        "<speak> なすの旬は6月から9月です。。。他にどの野菜について知りたいですか？ </speak>",
         "<speak> 他にどの野菜について知りたいですか？ </speak>"
     )
-    .userSays('MyVegetableIntent', {VegetableName: '', SeasonName: '旬'})
+    .userSays('MyVegetableIntent', {VegetableName: 'ゴーヤ', SeasonName: '旬'})
     .ssmlResponse
     .shouldEqual(
-        "<speak> の旬は4です。。。他にどの野菜について知りたいですか？ </speak>",
+        "<speak> ゴーヤの旬は7月から8月です。。。他にどの野菜について知りたいですか？ </speak>",
         "<speak> 他にどの野菜について知りたいですか？ </speak>"
     )
-    .userSays('MyVegetableIntent', {VegetableName: '', SeasonName: '旬'})
+    .userSays('MyVegetableIntent', {VegetableName: 'とうもろこし', SeasonName: '旬'})
     .ssmlResponse
     .shouldEqual(
-        "<speak> の旬は4です。。。他にどの野菜について知りたいですか？ </speak>",
+        "<speak> とうもろこしの旬は7月から8月です。。。他にどの野菜について知りたいですか？ </speak>",
         "<speak> 他にどの野菜について知りたいですか？ </speak>"
     )
-    .userSays('MyVegetableIntent', {VegetableName: '', SeasonName: '旬'})
+    .userSays('MyVegetableIntent', {VegetableName: 'ズッキーニ', SeasonName: '旬'})
     .ssmlResponse
     .shouldEqual(
-        "<speak> の旬は4です。。。他にどの野菜について知りたいですか？ </speak>",
+        "<speak> ズッキーニの旬は6月から8月です。。。他にどの野菜について知りたいですか？ </speak>",
         "<speak> 他にどの野菜について知りたいですか？ </speak>"
     )
-    .userSays('MyVegetableIntent', {VegetableName: '', SeasonName: '旬'})
+    .userSays('MyVegetableIntent', {VegetableName: 'にんじん', SeasonName: '旬'})
     .ssmlResponse
     .shouldEqual(
-        "<speak> の旬は4です。。。他にどの野菜について知りたいですか？ </speak>",
+        "<speak> にんじんの旬は4月から7月、11月から12月です。。。他にどの野菜について知りたいですか？ </speak>",
         "<speak> 他にどの野菜について知りたいですか？ </speak>"
     )
     .userSays('AMAZON.CancelIntent')
