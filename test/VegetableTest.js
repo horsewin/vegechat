@@ -133,24 +133,114 @@ conversation(opts)
         "<speak> にんじんの旬は4月から7月、11月から12月です。湿気に弱いので冷蔵庫に丸のまま保存する際には新聞紙などで包みましょう。冬など寒い季節は新聞紙にくるんだり、箱のまま冷暗所においておいても大丈夫です。切った物は切り口から傷み始めるので、ぴったりとラップで包んで冷蔵庫に入れておき、3日-4日位で使い切るようにしましょう。。他にどの野菜について知りたいですか？ </speak>",
         "<speak> 他にどの野菜について知りたいですか？ </speak>"
     )
-    // .userSays('MyVegetableOnlyIntent', {VegetableName: '', SeasonName: ''})
-    // .ssmlResponse
-    // .shouldEqual(
-    //     "<speak> の旬はです。。。他にどの野菜について知りたいですか？ </speak>",
-    //     "<speak> 他にどの野菜について知りたいですか？ </speak>"
-    // )
-    // .userSays('MyVegetableOnlyIntent', {VegetableName: '', SeasonName: ''})
-    // .ssmlResponse
-    // .shouldEqual(
-    //     "<speak> の旬はです。。。他にどの野菜について知りたいですか？ </speak>",
-    //     "<speak> 他にどの野菜について知りたいですか？ </speak>"
-    // )
-    // .userSays('MyVegetableOnlyIntent', {VegetableName: '', SeasonName: ''})
-    // .ssmlResponse
-    // .shouldEqual(
-    //     "<speak> の旬はです。。。他にどの野菜について知りたいですか？ </speak>",
-    //     "<speak> 他にどの野菜について知りたいですか？ </speak>"
-    // )
+    .userSays('MyVegetableOnlyIntent', {VegetableName: 'じゃがいも', SeasonName: ''})
+    .ssmlResponse
+    .shouldEqual(
+        "<speak> じゃがいもの旬は5月から6月、10月から2月です。冷蔵庫には入れず、風通しのよい冷暗所で保存しましょう。ただし、日に当てると芽に含まれる毒素・ソラニンが生成されるので注意です。りんごと一緒にポリ袋に入れておくと、りんごから出る成分が芽の成長を抑え、芽が出にくくなるという効果があります。冷凍で保存も可能ですが、生のまま冷凍してしまうと組織が壊れ、解凍した時に水分が抜けてフカフカの状態になってしまい美味しくなくなってしまいます。冷凍で長期保存したい場合は、一度電子レンジにかけるか、茹でるか蒸して完全に火を通し、潰して小分けにしましょう。。他にどの野菜について知りたいですか？ </speak>",
+        "<speak> 他にどの野菜について知りたいですか？ </speak>"
+    )
+    .userSays('MyVegetableOnlyIntent', {VegetableName: '玉ねぎ', SeasonName: ''})
+    .ssmlResponse
+    .shouldEqual(
+        "<speak> 玉ねぎの旬は4月から6月、9月から12月です。黄玉ねぎは、湿度が高いと腐敗が早く進みますので、冷蔵庫ではなく、風通しのよい冷暗所で保存しましょう。ただし、新玉ねぎは、水分が多く、痛みやすいので袋に入れ野菜庫に入れるか、風通しの良い涼しいところにおいておきましょう。また、切って使いかけの物は切り口が乾燥しないようにラップして冷蔵するようにしましょう。。他にどの野菜について知りたいですか？ </speak>",
+        "<speak> 他にどの野菜について知りたいですか？ </speak>"
+    )
+    .userSays('MyVegetableOnlyIntent', {VegetableName: 'ぶなしめじ', SeasonName: ''})
+    .ssmlResponse
+    .shouldEqual(
+        "<speak> ぶなしめじの旬は9月から11月です。使い残したぶなしめじはラップに包んで冷蔵庫で保存し、なるべく3-4日で使い切るように心掛けましょう。また、水けが付いていると傷みやすいので要注意。冷凍する場合は、石づきを切り落として小房に分け、袋に入れて冷凍庫で約1ヶ月保存可能です。。他にどの野菜について知りたいですか？ </speak>",
+        "<speak> 他にどの野菜について知りたいですか？ </speak>"
+    )
+    .userSays('MyVegetableOnlyIntent', {VegetableName: 'まいたけ', SeasonName: ''})
+    .ssmlResponse
+    .shouldEqual(
+        "<speak> まいたけの旬は9月から11月です。ラップに包んで冷蔵庫で保存し、なるべく3-4日で使い切るように心掛けましょう。また、水気がついていると傷みやすいので要注意です。冷凍する場合は、石づきを切り落とし小房に分け、袋に入れて冷凍庫で約1ヶ月保存可能です。。他にどの野菜について知りたいですか？ </speak>",
+        "<speak> 他にどの野菜について知りたいですか？ </speak>"
+    )
+    .userSays('MyVegetableOnlyIntent', {VegetableName: 'ごぼう', SeasonName: ''})
+    .ssmlResponse
+    .shouldEqual(
+        "<speak> ごぼうの旬は3月から5月、10月から12月です。泥付きの場合は、そのまま新聞紙に包んで風通しのよい涼しいところで保存してください。洗ってあるごぼうはポリ袋などに密封して、冷蔵庫の野菜室で保存しましょう。。他にどの野菜について知りたいですか？ </speak>",
+        "<speak> 他にどの野菜について知りたいですか？ </speak>"
+    )
+    .userSays('MyVegetableOnlyIntent', {VegetableName: 'さつまいも', SeasonName: ''})
+    .ssmlResponse
+    .shouldEqual(
+        "<speak> さつまいもの旬は9月から11月です。寒さに弱いので、冷蔵庫には入れず、新聞紙に包んで常温で保存しましょう。保存は約2週間くらいが目安で、ほどよい水気と乾燥に注意しましょう。。他にどの野菜について知りたいですか？ </speak>",
+        "<speak> 他にどの野菜について知りたいですか？ </speak>"
+    )
+    .userSays('MyVegetableOnlyIntent', {VegetableName: '里いも', SeasonName: ''})
+    .ssmlResponse
+    .shouldEqual(
+        "<speak> 里いもの旬は9月から11月です。乾燥と低温に弱い食材です。冷蔵庫での保存は避け、ぬらした新聞紙に包んで、日の当たらない風通しの良い場所で保存してください。泥が洗ってあるものは、長期保存に向いていないので買ってきたら2-3日程度で食べきりましょう。。他にどの野菜について知りたいですか？ </speak>",
+        "<speak> 他にどの野菜について知りたいですか？ </speak>"
+    )
+    .userSays('MyVegetableOnlyIntent', {VegetableName: '長ねぎ', SeasonName: ''})
+    .ssmlResponse
+    .shouldEqual(
+        "<speak> 長ねぎの旬は11月から3月です。「根深ねぎ」は新聞紙で包み、冷暗所で立てて保存します。使いかけの場合は、白と緑の部分で切り分けてからビニール袋に入れ、冷蔵庫の野菜室で保存しましょう。「葉ねぎ」は、湿らせた新聞紙に包んで冷蔵庫の野菜室で保存します。また、両方とも、みじん切りや小口切りにして冷凍しておけば1ヶ月くらい持ちます。。他にどの野菜について知りたいですか？ </speak>",
+        "<speak> 他にどの野菜について知りたいですか？ </speak>"
+    )
+    .userSays('MyVegetableOnlyIntent', {VegetableName: '白菜', SeasonName: ''})
+    .ssmlResponse
+    .shouldEqual(
+        "<speak> 白菜の旬は11月から2月です。新聞紙に包んで、冷暗所に立てて保存しましょう。丸ごとなら、冬場は3-4週間は長持ちします。外葉からはがして使う場合は、芯に切り込みを入れて水を含んだ新聞紙をはさみ、ラップで包んで冷蔵庫の野菜室で立てて保存しましょう。一方、カットした白菜は傷みやすいので、ラップで包んで冷蔵庫で保存し、早めに使い切りましょう。。他にどの野菜について知りたいですか？ </speak>",
+        "<speak> 他にどの野菜について知りたいですか？ </speak>"
+    )
+    .userSays('MyVegetableOnlyIntent', {VegetableName: 'だいこん', SeasonName: ''})
+    .ssmlResponse
+    .shouldEqual(
+        "<speak> だいこんの旬は10月から3月です。葉がついている場合は、葉が根の養分を吸い上げてしまうので、切り落として別々に保存しましょう。水分たっぷりの大根は乾燥させないことが大切なので、切り口はラップや湿らせた新聞紙などでくるみ、冷蔵庫の野菜室へ入れましょう。。他にどの野菜について知りたいですか？ </speak>",
+        "<speak> 他にどの野菜について知りたいですか？ </speak>"
+    )
+    .userSays('MyVegetableOnlyIntent', {VegetableName: 'ブロッコリー', SeasonName: ''})
+    .ssmlResponse
+    .shouldEqual(
+        "<speak> ブロッコリーの旬は12月から3月です。日もちがせず、黄色く変色しやすいので、すぐに食べ切ることがおすすめです。買ったらすぐにビニール袋に入れて、冷蔵庫の野菜室で立てて保存し、4-5日で使い切りましょう。それ以上保存する場合は、小房に分けて硬めにゆでてから冷凍庫へ入れましょう。。他にどの野菜について知りたいですか？ </speak>",
+        "<speak> 他にどの野菜について知りたいですか？ </speak>"
+    )
+    .userSays('MyVegetableOnlyIntent', {VegetableName: 'ほうれんそう', SeasonName: ''})
+    .ssmlResponse
+    .shouldEqual(
+        "<speak> ほうれんそうの旬は11月から2月です。ぬらした新聞紙で包み、ビニール袋に入れて、冷蔵庫の野菜室で立てて保存します。長持ちさせるなら、かためにゆで、冷水に取ってから水気をよくしぼり、ラップに包んで冷凍しましょう。。他にどの野菜について知りたいですか？ </speak>",
+        "<speak> 他にどの野菜について知りたいですか？ </speak>"
+    )
+    .userSays('MyVegetableOnlyIntent', {VegetableName: '水菜', SeasonName: ''})
+    .ssmlResponse
+    .shouldEqual(
+        "<speak> 水菜の旬は12月から2月です。日もちがしないので、購入後はできるだけ早めに使い切るのがポイントです。 葉がやわらかく傷みやすいので、冷蔵庫に入れるときはぬらした新聞紙で包んでからビニール袋に入れ、冷蔵庫の野菜室に立てて保存しましょう。。他にどの野菜について知りたいですか？ </speak>",
+        "<speak> 他にどの野菜について知りたいですか？ </speak>"
+    )
+    .userSays('MyVegetableOnlyIntent', {VegetableName: '菜の花', SeasonName: ''})
+    .ssmlResponse
+    .shouldEqual(
+        "<speak> 菜の花の旬は2月から3月です。保存する場合は、しめらせた新聞紙などで全体を包み、ビニール袋に入れて立てて冷蔵庫の野菜室に保存します。固めにゆでラップに包み、冷蔵の場合は2-3日程度の保存ができます。長持ちさせたいときには、固めにゆでて水気をしぼってからラップで包み、冷凍しましょう。。他にどの野菜について知りたいですか？ </speak>",
+        "<speak> 他にどの野菜について知りたいですか？ </speak>"
+    )
+    .userSays('MyVegetableOnlyIntent', {VegetableName: '小松菜', SeasonName: ''})
+    .ssmlResponse
+    .shouldEqual(
+        "<speak> 小松菜の旬は12月から2月です。傷みやすく、1-2日程度で葉がしおれてくるので、できるだけ早め使いましょう。保存する場合は、湿らせた新聞紙やペーパータオルで包み、立てて冷蔵庫に入れれば2-3日程度はもちます。 冷凍するなら、水洗いして水分をしっかりふき取り、食べやすい長さに切って保存袋に入れ、空気をしっかり抜いて冷蔵庫へ入れましょう。。他にどの野菜について知りたいですか？ </speak>",
+        "<speak> 他にどの野菜について知りたいですか？ </speak>"
+    )
+    .userSays('MyVegetableOnlyIntent', {VegetableName: 'もやし', SeasonName: ''})
+    .ssmlResponse
+    .shouldEqual(
+        "<speak> もやしの旬はオールシーズンです。あまり保存がきかないので、できるだけ買ってきたらすぐに使い切ることがおすすめです。もし保存する場合は、湯通しして細菌の繁殖を防いだうえでポリ袋に入れて保存しましょう。ポリ袋につま楊枝などで穴をあけて保存することをおすすめします。。他にどの野菜について知りたいですか？ </speak>",
+        "<speak> 他にどの野菜について知りたいですか？ </speak>"
+    )
+    .userSays('MyVegetableOnlyIntent', {VegetableName: '青じそ', SeasonName: ''})
+    .ssmlResponse
+    .shouldEqual(
+        "<speak> 青じその旬はオールシーズンです。乾燥に弱いのでラップに包んで野菜室で保存するのがおすすめです。湿らせたペーパータオルで包むとより長持ちします。また、調理前に水につけると蘇生して、パリッとなるためおすすめです。。他にどの野菜について知りたいですか？ </speak>",
+        "<speak> 他にどの野菜について知りたいですか？ </speak>"
+    )
+    .userSays('MyVegetableOnlyIntent', {VegetableName: '豆苗', SeasonName: ''})
+    .ssmlResponse
+    .shouldEqual(
+        "<speak> 豆苗の旬はオールシーズンです。袋詰めのままで封を開けていない場合は、野菜室で立てて保存することがおすすめです。根をカットして保存する場合は、冷蔵庫の中がおすすめです。ただし冷気が直接あたると葉が傷みますので、あたらない場所を選びなるべく早く使い切るようにしましょう。。他にどの野菜について知りたいですか？ </speak>",
+        "<speak> 他にどの野菜について知りたいですか？ </speak>"
+    )
     // .userSays('MyVegetableOnlyIntent', {VegetableName: '', SeasonName: ''})
     // .ssmlResponse
     // .shouldEqual(
